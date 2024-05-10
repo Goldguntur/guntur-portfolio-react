@@ -1,4 +1,11 @@
+"use client";
+
+import { useRef } from "react";
+import { TypeAnimation } from "react-type-animation";
+import "./globals.css";
+
 import Navbar from "../components/navbar";
+
 const guntur = {
   name: "Guntur",
   age: 17,
@@ -14,11 +21,45 @@ const guntur = {
 export default function Home() {
   return (
     <>
-      <nav>
+      <nav className="mb-10">
         <Navbar name={guntur.name} logoImg="/logo.jpg" alt={guntur.img.alt} />
       </nav>
-      <main>
-        <section></section>
+      <main className="w-full h-full flex items-center justify-center md:flex-row">
+        <section key="article" className="lg:w-1/2">
+          <article>
+            <h1 className="font-semibold lg:text-3xl text-2xl mb-1">
+              <span className="text-primary">Hi there,</span> my name is Guntur
+            </h1>
+            <h2 className=" font-medium lg:text-2xl text-xl mb-2">
+              I am
+              <span className="text-primary">
+                <TypeAnimation
+                  sequence={[
+                    " programmer",
+                    2000,
+                    " web developer",
+                    2000,
+                    " front end developer",
+                    2000,
+                  ]}
+                  speed={10}
+                  className="text-inherit text-primary"
+                  repeat={Infinity}
+                />
+              </span>
+            </h2>
+            <p className="text-xs md:text-sm">
+              My name's guntur putra hermawan, i was born on 10 november 2007 in
+              indonesia, i started coding in 2023 and when this portfolio was
+              created I had already reached the javascript framework stage of
+              <a href="http://roadmap.sh" className=" underline">
+                {" "}
+                roadmap.sh
+              </a>{" "}
+              and that's why this portfolio website was created with React
+            </p>
+          </article>
+        </section>
       </main>
     </>
   );
