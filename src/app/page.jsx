@@ -4,7 +4,8 @@ import { useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
 import "./globals.css";
 
-import Navbar from "../components/navbar";
+import Navbar from "@/components/navbar";
+import CardDialoge from "@/components/card-dialoge";
 
 const guntur = {
   name: "Guntur",
@@ -24,9 +25,12 @@ export default function Home() {
       <nav className="mb-10">
         <Navbar name={guntur.name} logoImg="/logo.jpg" alt={guntur.img.alt} />
       </nav>
-      <main className="w-full h-full flex items-center justify-center md:flex-row">
-        <section key="article" className="lg:w-1/2">
-          <article>
+      <main>
+        <section
+          key="home"
+          className="w-full h-full gap-4 flex items-center justify-center md:flex-row p-3"
+        >
+          <article className="w-1/2">
             <h1 className="font-semibold lg:text-3xl text-2xl mb-1">
               <span className="text-primary">Hi there,</span> my name is Guntur
             </h1>
@@ -59,6 +63,9 @@ export default function Home() {
               and that's why this portfolio website was created with React
             </p>
           </article>
+          <aside className="w-1/2 h-52">
+            <CardDialoge />
+          </aside>
         </section>
       </main>
     </>

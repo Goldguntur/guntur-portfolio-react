@@ -11,9 +11,11 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "cv-bg": "url('/images/cv-image.png')",
       },
       colors: {
         primary: "#00ffff",
+        "bg-cv": "rgba(0, 0, 0, 0.8)",
       },
     },
   },
