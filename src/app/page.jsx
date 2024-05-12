@@ -16,6 +16,7 @@ const guntur = {
     src: "/images/guntur.png",
     src2: "/images/guntur-parka.png",
     alt: "guntur",
+    CV: "/images/cv-image.png",
   },
 };
 
@@ -28,13 +29,21 @@ export default function Home() {
       <main>
         <section
           key="home"
-          className="w-full h-full gap-4 flex items-center justify-center md:flex-row p-3"
+          className="w-full h-full gap-4 flex items-center justify-center lg:flex-row flex-col p-3"
         >
           <article className="w-1/2">
-            <h1 className="font-semibold lg:text-3xl text-2xl mb-1">
-              <span className="text-primary">Hi there,</span> my name is Guntur
+            <h1 className="font-semibold lg:text-5xl text-3xl mb-3 text-center lg:text-justify">
+              I<span className="text-primary">n</span>t
+              <span className="text-primary">r</span>o
+              <span className="text-primary">d</span>u
+              <span className="text-primary">c</span>t
+              <span className="text-primary">i</span>o
+              <span className="text-primary">n</span>
             </h1>
-            <h2 className=" font-medium lg:text-2xl text-xl mb-2">
+            <h2 className="font-semibold lg:text-3xl text-2xl mb-1">
+              <span className="text-primary">Hi there,</span> my name is Guntur
+            </h2>
+            <h3 className=" font-medium lg:text-2xl text-xl mb-2">
               I am
               <span className="text-primary">
                 <TypeAnimation
@@ -51,7 +60,7 @@ export default function Home() {
                   repeat={Infinity}
                 />
               </span>
-            </h2>
+            </h3>
             <p className="text-xs md:text-sm">
               My name's guntur putra hermawan, i was born on 10 november 2007 in
               indonesia, i started coding in 2023 and when this portfolio was
@@ -64,7 +73,7 @@ export default function Home() {
             </p>
           </article>
           <aside className="w-1/2 h-52">
-            <CardDialoge />
+            <CardDialoge Image={guntur.img.CV} />
           </aside>
         </section>
       </main>
