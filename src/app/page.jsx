@@ -1,11 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import { TypeAnimation } from "react-type-animation";
 import "./globals.css";
-
+import Home from "@/components/section/home";
 import Navbar from "@/components/ui/navbar";
-import CardDialoge from "@/components/ui/card-dialoge";
 
 const guntur = {
   name: "Guntur",
@@ -20,13 +18,20 @@ const guntur = {
   },
 };
 
-export default function Home() {
+export default function App() {
   return (
     <>
       <nav className="mb-10">
-        <Navbar name={guntur.name} logoImg="/logo.jpg" alt={guntur.img.alt} />
+        <Navbar
+          name={guntur.name}
+          logoImg="/logo.jpg"
+          className="z-[9999999]"
+          alt={guntur.img.alt}
+        />
       </nav>
-      <main></main>
+      <main>
+        <Home image={guntur.img.CV} key="home" />
+      </main>
     </>
   );
 }
