@@ -19,10 +19,10 @@ export default function CardDialoge({ Image }) {
   return (
     <>
       <div
-        className="card  bg-cv-bg  h-52 rounded-t-md bg-cover relative overflow-hidden group "
+        className="card  bg-cv-bg aspect-video w-1/2 rounded-t-md bg-cover relative overflow-hidden group "
         onClick={() => setIsOpen(true)}
       >
-        <div className=" bg-bg-cv backdrop-blur-sm w-full h-min bottom-0 absolute translate-y-12  group-hover:translate-y-0">
+        <div className=" bg-bg-cv backdrop-blur-sm h-min bottom-0 absolute translate-y-12  group-hover:translate-y-0 w-full">
           <a
             href="http://"
             className="p-2 text-lg font-light hover:underline transition-all"

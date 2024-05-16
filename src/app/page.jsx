@@ -4,6 +4,7 @@ import { useRef } from "react";
 import "./globals.css";
 import Home from "@/components/section/home";
 import Navbar from "@/components/ui/navbar";
+import About from "@/components/section/about";
 
 const guntur = {
   name: "Guntur",
@@ -30,7 +31,8 @@ export default function App() {
         />
       </nav>
       <main>
-        <Home image={guntur.img.CV} key="home" />
+        <Home key="home" />
+        <About image={guntur.img.CV} key="about" />
       </main>
     </>
   );

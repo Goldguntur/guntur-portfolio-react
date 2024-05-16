@@ -1,12 +1,11 @@
-import CardDialoge from "../ui/card-dialoge";
 import CardDialoge2 from "../ui/card-dialoge2";
 import { TypeAnimation } from "react-type-animation";
 
-export default function home({ image }) {
+export default function home() {
   return (
     <section
       key="home"
-      className="w-full  lg:h-[90vh] px-8   lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:place-items-center lg:place-content-center flex justify-center flex-col"
+      className=" mb-32 mx-auto lg:grid-flow-col-dense lg:h-[90vh]   lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:place-items-center lg:place-content-center flex justify-center flex-col "
     >
       <article className="w-[45vw]">
         <h1 className="font-bold lg:text-4xl text-3xl mb-3">
@@ -44,18 +43,16 @@ export default function home({ image }) {
           and that's why this portfolio website was created with React
         </p>
       </article>
-      <aside className=" w-[45vw] h-52">
-        <CardDialoge Image={image} />
-      </aside>
+
       <section className="w-[45vw] ">
         <CardDialoge2 image="/Certificate/js-intermediate.png" />
       </section>
-      <aside>
+      <aside className="row-span-2">
         <img
           src="/images/guntur-parka.png"
           alt="guntur"
-          width="170"
-          className="mb-4 hover:-translate-y-3 hover:-translate-x-3 -z-50 transition cursor-pointer"
+          width="300"
+          className="  hover:-translate-y-3 hover:-translate-x-3 -z-50 transition cursor-pointer lg:ml-12"
         />
       </aside>
     </section>

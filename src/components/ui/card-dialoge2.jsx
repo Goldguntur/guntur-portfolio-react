@@ -39,8 +39,8 @@ export default function CardDialoge2({ image }) {
         </div>
         <button
           onClick={open}
-          className="bottom-10 absolute border-sky-900 hover:-translate-y-[1px] hover:border-b-[6px]
-                   active:border-b-[2px] active:brightness-90 active:translate-y-[2px] hover:bg-sky-800 bg-sky-600 text-white mt-6 rounded p-2 px-6"
+          className="bottom-10 absolute border-zinc-400 hover:-translate-y-[1px] hover:border-b-[6px]
+                   active:border-b-[2px] active:brightness-90 active:translate-y-[2px]  bg-white text-blue-500 font-bold mt-6 rounded p-2 px-6"
         >
           Explore
         </button>
