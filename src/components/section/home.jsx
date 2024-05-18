@@ -25,6 +25,8 @@ export default function home() {
                 2000,
                 " front end developer",
                 2000,
+                "software developer",
+                2000,
               ]}
               speed={10}
               className="text-inherit text-primary"
@@ -52,7 +54,7 @@ export default function home() {
           src="/images/guntur-parka.png"
           alt="guntur"
           width="300"
-          className="  hover:-translate-y-3 hover:-translate-x-3 -z-50 transition cursor-pointer lg:ml-12"
+          className="  hover:-translate-y-3 translate-y-4 hover:-translate-x-3 -z-50 transition cursor-pointer lg:ml-12"
         />
       </aside>
     </section>

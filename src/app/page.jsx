@@ -5,6 +5,7 @@ import "./globals.css";
 import Home from "@/components/section/home";
 import Navbar from "@/components/ui/navbar";
 import About from "@/components/section/about";
+import Projects from "@/components/section/projects";
 
 const guntur = {
   name: "Guntur",
@@ -33,6 +34,7 @@ export default function App() {
       <main>
         <Home key="home" />
         <About image={guntur.img.CV} key="about" />
+        <Projects key="projects" />
       </main>
     </>
   );

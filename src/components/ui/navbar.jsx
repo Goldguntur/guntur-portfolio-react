@@ -1,7 +1,6 @@
 export default function Navbar({ name, logoImg, alt }) {
   return (
-    <div className="navbar w-full flex justify-between fixed top-0  items-center ">
-      {/* logo nav */}
+    <div className="navbar w-full flex bg-black justify-between fixed top-0  items-center z-[9999999px]">
       <h1 className=" text-primary text-xl">
         {name}e<span className=" text-white">17</span>
       </h1>
