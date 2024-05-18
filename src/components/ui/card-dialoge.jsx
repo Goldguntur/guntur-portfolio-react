@@ -16,10 +16,17 @@ export default function CardDialoge({ Image }) {
     setIsOpen(false);
   }
 
+  if (!Image) {
+    console.error(
+      "CardDialoge: Image prop is null or undefined. Please check your code for bugs such as null pointer references."
+    );
+    return null;
+  }
+
   return (
     <>
       <div
-        className="card  bg-cv-bg aspect-video w-1/2 rounded-t-md bg-cover relative overflow-hidden group "
+        className="card bg-cv-bg aspect-video w-1/2 rounded-t-md bg-cover relative overflow-hidden group z-[-1000px] "
         onClick={() => setIsOpen(true)}
       >
         <div className=" bg-bg-cv backdrop-blur-sm h-min bottom-0 absolute translate-y-12  group-hover:translate-y-0 w-full">
