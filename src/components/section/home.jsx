@@ -46,7 +46,7 @@ export default function home() {
         </p>
       </article>
 
-      <section className="w-[45vw] -z-50">
+      <section className="w-[45vw]">
         <CardDialoge2
           image="/Certificate/js-intermediate.png"
           className="-z-50"
