@@ -1,7 +1,7 @@
 export default function Contact({ number, email }) {
   return (
     <>
-      <section className="h-[100vh] w-[80%]  pt-16 mx-auto mt-10" id="contact">
+      <section className="] w-[80%]  pt-16 mx-auto mt-10" id="contact">
         <div className="form-contact  ">
           <div className="contact  flex justify-between border rounded-lg p-0 border-white lg:flex-row flex-col-reverse ">
             <form method="get">

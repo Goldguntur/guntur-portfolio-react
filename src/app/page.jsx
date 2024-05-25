@@ -7,6 +7,7 @@ import Navbar from "@/components/section/navbar";
 import About from "@/components/section/about";
 import Projects from "@/components/section/projects";
 import Contact from "@/components/section/contact";
+import Footer from "@/components/section/footer";
 
 const guntur = {
   name: "Guntur",
@@ -43,6 +44,9 @@ export default function App() {
           x={guntur.x}
         />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
