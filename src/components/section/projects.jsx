@@ -19,7 +19,7 @@ const projects = {
   },
   newyear: {
     Title: "New Year",
-    link: "https://goldguntur.github.io/newYear/",
+    link: "https://goldguntur.github.io/newYears/",
     image: "/images/newyear.png",
     description: "Happy New Year 2024 for my self",
     readMore:
@@ -38,43 +38,45 @@ const projects = {
 export default function Projects() {
   return (
     <>
-      <div className="pt-20 px-8 text-center">
-        <h1 className="font-bold lg:text-4xl text-3xl mb-14 text-primary">
-          Projects
-        </h1>
-        <div className="card-section mt-23 flex gap-5 justify-center">
-          <CardDialoge3
-            Image={projects.bookshelf.image}
-            Title={projects.bookshelf.Title}
-            link={projects.bookshelf.link}
-            description={projects.bookshelf.description}
-            readMore={projects.bookshelf.readMore}
-          />
-          <CardDialoge3
-            Image={projects.newyear.image}
-            Title={projects.newyear.Title}
-            link={projects.newyear.link}
-            description={projects.newyear.description}
-            readMore={projects.newyear.readMore}
-          />
+      <section id="projects">
+        <div className="pt-20 px-8 text-center">
+          <h1 className="font-bold lg:text-4xl text-3xl mb-14 text-primary">
+            Projects
+          </h1>
+          <div className="card-section  flex gap-5 flex-wrap justify-center">
+            <CardDialoge3
+              Image={projects.bookshelf.image}
+              Title={projects.bookshelf.Title}
+              link={projects.bookshelf.link}
+              description={projects.bookshelf.description}
+              readMore={projects.bookshelf.readMore}
+            />
+            <CardDialoge3
+              Image={projects.newyear.image}
+              Title={projects.newyear.Title}
+              link={projects.newyear.link}
+              description={projects.newyear.description}
+              readMore={projects.newyear.readMore}
+            />
 
-          <CardDialoge3
-            Image={projects.album.image}
-            Title={projects.album.Title}
-            link={projects.album.link}
-            description={projects.album.description}
-            readMore={projects.album.readMore}
-          />
+            <CardDialoge3
+              Image={projects.album.image}
+              Title={projects.album.Title}
+              link={projects.album.link}
+              description={projects.album.description}
+              readMore={projects.album.readMore}
+            />
 
-          <CardDialoge3
-            Image={projects.calculator.image}
-            Title={projects.calculator.Title}
-            link={projects.calculator.link}
-            description={projects.calculator.description}
-            readMore={projects.calculator.readMore}
-          />
+            <CardDialoge3
+              Image={projects.calculator.image}
+              Title={projects.calculator.Title}
+              link={projects.calculator.link}
+              description={projects.calculator.description}
+              readMore={projects.calculator.readMore}
+            />
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

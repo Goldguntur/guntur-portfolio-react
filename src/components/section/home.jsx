@@ -4,10 +4,22 @@ import { TypeAnimation } from "react-type-animation";
 export default function home() {
   return (
     <section
-      key="home"
-      className=" mb-32 mx-auto lg:grid-flow-col-dense lg:h-[90vh]   lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:place-items-center lg:place-content-center flex justify-center flex-col "
+      id="home"
+      className="mx-auto mb-32 px-8 pt-9 lg:grid-flow-col-dense lg:h-[100vh]   lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:place-items-center flex items-center flex-col "
     >
-      <article className="w-[45vw]">
+      <article className="lg:w-[45vw]   mb-24 lg:mb-0 text-center lg:text-justify">
+        <div className="relative flex justify-center lg:hidden ">
+          <img
+            src="/images/blob.svg"
+            className="absolute w-[120px] md:w-[180px] -z-50"
+            alt="svg"
+          />
+          <img
+            src="/images/guntur-parka.png"
+            alsst="guntur"
+            className="w-[150px] md:w-[200px] -translate-y-16"
+          />
+        </div>
         <h1 className="font-bold lg:text-4xl text-3xl mb-3">
           Introducing <span className="text-primary">myself</span>
         </h1>
@@ -25,7 +37,7 @@ export default function home() {
                 2000,
                 " front end developer",
                 2000,
-                "software developer",
+                " software developer",
                 2000,
               ]}
               speed={10}
@@ -45,19 +57,18 @@ export default function home() {
           and that's why this portfolio website was created with React
         </p>
       </article>
-
-      <section className="w-[45vw]">
+      <section className="lg:w-[45vw] lg:mx-0 mx-auto">
         <CardDialoge2
           image="/Certificate/js-intermediate.png"
-          className="-z-50"
+          className="-z-50 "
         />
       </section>
-      <aside className="row-span-2">
+
+      <aside className="row-span-2 hidden lg:block">
         <img
           src="/images/guntur-parka.png"
           alt="guntur"
-          width="300"
-          className="  hover:-translate-y-3 translate-y-4 hover:-translate-x-3 -z-50 transition cursor-pointer lg:ml-12"
+          className="w-[80%] -z-50 transition -translate-y-20 ml-20 lg:block hidden"
         />
       </aside>
     </section>

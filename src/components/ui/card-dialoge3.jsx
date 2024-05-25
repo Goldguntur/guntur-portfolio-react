@@ -26,26 +26,26 @@ export default function CardDialoge3({
   }
   return (
     <>
-      <div class="lg:max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/20 dark:border-gray-700  overflow-hidden">
-        <a href="">
-          <img class="rounded-t-lg" src={Image} alt="" />
+      <div className="lg:max-w-xs block bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800/20 dark:border-gray-700  overflow-hidden">
+        <a href={link}>
+          <img className="rounded-t-lg" src={Image} alt="" />
         </a>
-        <div class="p-5">
+        <div className="p-5">
           <a href={link}>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {Title}
             </h5>
           </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {description}
           </p>
           <button
             onClick={open}
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg"
+            className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg"
           >
             Read more
             <svg
-              class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -64,11 +64,11 @@ export default function CardDialoge3({
       <Transition appear show={isOpen}>
         <Dialog
           as="div"
-          className="relative z-10 focus:outline-none"
+          classNameName="relative z-10 focus:outline-none"
           onClose={close}
         >
-          <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4">
+          <div classNameName="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div classNameName="flex min-h-full items-center justify-center p-4">
               <TransitionChild
                 enter="ease-out duration-300"
                 enterFrom="opacity-0 transform-[scale(95%)]"
@@ -77,14 +77,14 @@ export default function CardDialoge3({
                 leaveFrom="opacity-100 transform-[scale(100%)]"
                 leaveTo="opacity-0 transform-[scale(95%)]"
               >
-                <DialogPanel className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl">
+                <DialogPanel classNameName="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl">
                   <DialogTitle
                     as="h3"
-                    className="text-base/7 font-medium text-white"
+                    classNameName="text-base/7 font-medium text-white"
                   >
                     {Title}
                   </DialogTitle>
-                  <p className="mt-2 text-sm/6 text-white/50">{readMore}</p>
+                  <p classNameName="mt-2 text-sm/6 text-white/50">{readMore}</p>
                 </DialogPanel>
               </TransitionChild>
             </div>
