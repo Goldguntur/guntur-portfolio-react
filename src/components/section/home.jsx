@@ -3,7 +3,6 @@ import CardDialoge2 from "../ui/card-dialoge2";
 import { TypeAnimation } from "react-type-animation";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CardDialoge from "../ui/card-dialoge";
 export default function home() {
   const title1 = useRef(null);
@@ -146,8 +145,8 @@ export default function home() {
         </h3>
 
         <p className="text-xs md:text-sm text-center lg:text-justify" id="text">
-          {newText.split(" ").map((word) => (
-            <span key={word} className={`word inline-block ml-0 mr-1 t`}>
+          {newText.split(" ").map((word, index) => (
+            <span key={index} className="word inline-block ml-0 mr-1 ">
               {word}
             </span>
           ))}

@@ -53,9 +53,9 @@ export default function CardDialoge3({
             />
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M1 5h12m0 0L9 1m4 4L9 9"
             />
           </button>
@@ -64,11 +64,11 @@ export default function CardDialoge3({
       <Transition appear show={isOpen}>
         <Dialog
           as="div"
-          classNameName="relative z-10 focus:outline-none"
+          className="relative z-10 focus:outline-none"
           onClose={close}
         >
-          <div classNameName="fixed inset-0 z-10 w-screen overflow-y-auto">
-            <div classNameName="flex min-h-full items-center justify-center p-4">
+          <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4">
               <TransitionChild
                 enter="ease-out duration-300"
                 enterFrom="opacity-0 transform-[scale(95%)]"
@@ -77,14 +77,14 @@ export default function CardDialoge3({
                 leaveFrom="opacity-100 transform-[scale(100%)]"
                 leaveTo="opacity-0 transform-[scale(95%)]"
               >
-                <DialogPanel classNameName="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl">
+                <DialogPanel className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl">
                   <DialogTitle
                     as="h3"
-                    classNameName="text-base/7 font-medium text-white"
+                    className="text-base/7 font-medium text-white"
                   >
                     {Title}
                   </DialogTitle>
-                  <p classNameName="mt-2 text-sm/6 text-white/50">{readMore}</p>
+                  <p className="mt-2 text-sm/6 text-white/50">{readMore}</p>
                 </DialogPanel>
               </TransitionChild>
             </div>

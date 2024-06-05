@@ -1,21 +1,93 @@
 import CardDialoge from "../ui/card-dialoge";
+import { useRef, useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
+gsap.registerPlugin(ScrollTrigger);
 export default function About({ image, github, x, instagram, linkedin }) {
+  const cvImageAni = useRef(null);
+  const headingAbout = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: { trigger: cvImageAni.current },
+    });
+
+    tl.fromTo(
+      cvImageAni.current,
+      {
+        y: -50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+      }
+    );
+    tl.fromTo(
+      headingAbout.current,
+      {
+        x: 50,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+      }
+    );
+
+    tl.fromTo(
+      ".icon-ani",
+      {
+        x: 50,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.5,
+      }
+    );
+
+    tl.fromTo(
+      ".char",
+      {
+        opacity: 0,
+        x: 50,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        stagger: 0.05,
+      }
+    );
+  }, []);
   return (
     <>
       <section className="lg:h-[100v]" id="about">
         <div className="flex justify-center lg:items-start items-center lg:flex-row flex-col lg:gap-14 gap-8 lg:px-8 pt-20 ">
-          <CardDialoge Image={image} />
+          <div className=" w-1/2 rounded-t-md  relative" ref={cvImageAni}>
+            <CardDialoge ref={cvImageAni} Image={image} />
+          </div>
           <article className="text-center lg:text-justify mb-24">
-            <h1 className="font-bold lg:text-4xl text-3xl mb-8 lg:mb-3 text-primary">
+            <h1
+              ref={headingAbout}
+              className="font-bold lg:text-4xl text-3xl mb-8 lg:mb-3 text-primary"
+            >
               About Me
             </h1>
             <div className="mx-auto flex justify-evenly">
-              <a href={github}>
+              <a href={github} className="icon-ani">
                 <svg
                   fill="#fff"
                   width="24px"
                   height="24px"
+                  x="0px"
+                  y="0px"
                   viewBox="0 0 512 512"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -31,7 +103,7 @@ export default function About({ image, github, x, instagram, linkedin }) {
                   </g>
                 </svg>
               </a>
-              <a href={linkedin}>
+              <a href={linkedin} className="icon-ani">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -50,7 +122,7 @@ export default function About({ image, github, x, instagram, linkedin }) {
                   ></path>
                 </svg>
               </a>
-              <a>
+              <a className="icon-ani">
                 <svg
                   xlinkHref={x}
                   xmlns="http://www.w3.org/2000/svg"
@@ -62,9 +134,9 @@ export default function About({ image, github, x, instagram, linkedin }) {
                 >
                   <path
                     fill="#212121"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M38,42H10c-2.209,0-4-1.791-4-4V10c0-2.209,1.791-4,4-4h28	c2.209,0,4,1.791,4,4v28C42,40.209,40.209,42,38,42z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                   <path
                     fill="#fff"
@@ -80,7 +152,7 @@ export default function About({ image, github, x, instagram, linkedin }) {
                   ></polygon>
                 </svg>
               </a>
-              <a href={instagram}>
+              <a href={instagram} className="icon-ani">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -157,10 +229,10 @@ export default function About({ image, github, x, instagram, linkedin }) {
                     <path
                       fill="none"
                       stroke="#fff"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="2"
                       d="M30,11H18c-3.9,0-7,3.1-7,7v12c0,3.9,3.1,7,7,7h12c3.9,0,7-3.1,7-7V18C37,14.1,33.9,11,30,11z"
                     ></path>
                     <circle cx="31" cy="16" r="1" fill="#fff"></circle>
@@ -172,19 +244,23 @@ export default function About({ image, github, x, instagram, linkedin }) {
                       r="6"
                       fill="none"
                       stroke="#fff"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="2"
                     ></circle>
                   </g>
                 </svg>
               </a>
             </div>
-            <p className="text-center lg:text-justify">
-              Guntur Putra Hermawan is a student at a vocational school Taruna
-              Budi Bangsa, in the field of visual communication design, and
-              plunge in the world of programming in 2023 until now.
+            <p className="text-center lg:text-justify mt-2">
+              {`Guntur Putra Hermawan is a student at a vocational school Taruna Budi Bangsa, in the field of visual communication design, and plunge in the world of programming in 2023 until now.`
+                .split(" ")
+                .map((char, index) => (
+                  <span key={index} className="char inline-block mr-1 ml-0">
+                    {char}
+                  </span>
+                ))}
             </p>
           </article>
         </div>
