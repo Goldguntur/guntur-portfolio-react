@@ -28,6 +28,10 @@ body {
 }
 
 @layer utilities {
+  .aktif {
+    display: flex;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
