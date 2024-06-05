@@ -31,9 +31,15 @@ export default function App() {
     <>
       <Navbar name={guntur.name} logoImg="/logo.jpg" alt={guntur.img.alt} />
       <main>
-        <Home key="home" />
-        <About image={guntur.img.CV} key="about" />
-        <Projects key="projects" />
+        <div className="mb-44">
+          <Home key="home" />
+        </div>
+        <div className="mb-44">
+          <About image={guntur.img.CV} key="about" />
+        </div>
+        <div className="mb-44">
+          <Projects key="projects" />
+        </div>
         <Contact
           key="contact"
           number={guntur.number}

@@ -1,4 +1,9 @@
 import CardDialoge3 from "../ui/card-dialoge3";
+import { useRef, useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = {
   calculator: {
@@ -36,44 +41,94 @@ const projects = {
 };
 
 export default function Projects() {
+  const headerProjectsAni = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: headerProjectsAni.current,
+      },
+    });
+
+    tl.fromTo(
+      headerProjectsAni.current,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+      }
+    );
+
+    tl.fromTo(
+      ".card-ani-3",
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: {
+          each: 0.5,
+        },
+        duration: 0.8,
+      }
+    );
+  }, []);
   return (
     <>
       <section id="projects">
         <div className="pt-20 px-8 text-center">
-          <h1 className="font-bold lg:text-4xl text-3xl mb-14 text-primary">
+          <h1
+            ref={headerProjectsAni}
+            className="font-bold lg:text-4xl text-3xl mb-14 text-primary"
+          >
             Projects
           </h1>
           <div className="card-section  flex gap-5 flex-wrap justify-center">
-            <CardDialoge3
-              Image={projects.bookshelf.image}
-              Title={projects.bookshelf.Title}
-              link={projects.bookshelf.link}
-              description={projects.bookshelf.description}
-              readMore={projects.bookshelf.readMore}
-            />
-            <CardDialoge3
-              Image={projects.newyear.image}
-              Title={projects.newyear.Title}
-              link={projects.newyear.link}
-              description={projects.newyear.description}
-              readMore={projects.newyear.readMore}
-            />
+            <div className=" size-fit card-ani-3">
+              <CardDialoge3
+                Image={projects.bookshelf.image}
+                Title={projects.bookshelf.Title}
+                link={projects.bookshelf.link}
+                description={projects.bookshelf.description}
+                readMore={projects.bookshelf.readMore}
+              />
+            </div>
 
-            <CardDialoge3
-              Image={projects.album.image}
-              Title={projects.album.Title}
-              link={projects.album.link}
-              description={projects.album.description}
-              readMore={projects.album.readMore}
-            />
+            <div className=" size-fit card-ani-3">
+              <CardDialoge3
+                Image={projects.newyear.image}
+                Title={projects.newyear.Title}
+                link={projects.newyear.link}
+                description={projects.newyear.description}
+                readMore={projects.newyear.readMore}
+              />
+            </div>
 
-            <CardDialoge3
-              Image={projects.calculator.image}
-              Title={projects.calculator.Title}
-              link={projects.calculator.link}
-              description={projects.calculator.description}
-              readMore={projects.calculator.readMore}
-            />
+            <div className=" size-fit card-ani-3">
+              <CardDialoge3
+                Image={projects.album.image}
+                Title={projects.album.Title}
+                link={projects.album.link}
+                description={projects.album.description}
+                readMore={projects.album.readMore}
+              />
+            </div>
+
+            <div className=" size-fit card-ani-3">
+              <CardDialoge3
+                Image={projects.calculator.image}
+                Title={projects.calculator.Title}
+                link={projects.calculator.link}
+                description={projects.calculator.description}
+                readMore={projects.calculator.readMore}
+              />
+            </div>
           </div>
         </div>
       </section>
