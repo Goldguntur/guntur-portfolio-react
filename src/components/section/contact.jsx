@@ -1,10 +1,69 @@
+import { useRef, useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Contact({ number, email }) {
+  useEffect(() => {
+    const form = document.querySelectorAll("section#contact  form input");
+    const btnSend = document.querySelector("section#contact  form button");
+    const small = document.querySelectorAll("section#contact  form small");
+    const contact = document.getElementById("contact-form");
+
+    const from = Array.from(form);
+
+    if (form && btnSend && small && contact) {
+      contact.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        from.forEach((f, i) => {
+          if (!f.value.trim()) {
+            form[i].setAttribute("required", "required");
+          } else {
+            form[i].removeAttribute("required");
+          }
+        });
+      });
+
+      from.forEach((f, i) => {
+        f.addEventListener("keyup", () => {
+          if (f.value.length > 0) {
+            form[i].removeAttribute("required");
+          }
+        });
+      });
+    }
+  }, []);
+
+  const contactAni = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      contactAni.current,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: contactAni.current,
+          start: "top 80%",
+        },
+      }
+    );
+  }, []);
+
   return (
     <>
-      <section className="] w-[80%]  pt-16 mx-auto mt-10" id="contact">
+      <section
+        ref={contactAni}
+        className="] w-[80%]  pt-16 mx-auto mt-10"
+        id="contact"
+      >
         <div className="form-contact  ">
           <div className="contact  flex justify-between border rounded-lg p-0 border-white lg:flex-row flex-col-reverse ">
-            <form method="get">
+            <form method="get" id="contact-form">
               <fieldset className="p-8">
                 <div className="md:flex justify-end gap-8 mb-8">
                   <div className="relative h-11 w-full min-w-[200px] md:mb-0 mb-8">
@@ -84,7 +143,9 @@ export default function Contact({ number, email }) {
                   </small>
                 </div>
                 <div className="max-w-32 bg-transparent mx-auto  items-center justify-center flex border-2 border-sky-500 shadow-lg hover:bg-sky-500 text-sky-500 hover:text-white duration-300 cursor-pointer active:scale-[0.98]">
-                  <button className="px-5 py-2">Click Me </button>
+                  <button type="submit" className="px-5 py-2">
+                    Click Me{" "}
+                  </button>
                 </div>
               </fieldset>
             </form>
