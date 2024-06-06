@@ -1,3 +1,5 @@
+"use client";
+
 import CardDialoge3 from "../ui/card-dialoge3";
 import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

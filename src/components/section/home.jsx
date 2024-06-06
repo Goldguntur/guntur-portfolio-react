@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useEffect, useState } from "react";
 import CardDialoge2 from "../ui/card-dialoge2";
 import { TypeAnimation } from "react-type-animation";

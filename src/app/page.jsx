@@ -1,6 +1,3 @@
-"use client";
-
-import { useRef } from "react";
 import "./globals.css";
 import Home from "@/components/section/home";
 import Navbar from "@/components/section/navbar";
@@ -26,7 +23,7 @@ const guntur = {
   },
 };
 
-export default function App() {
+const App = () => {
   return (
     <>
       <Navbar name={guntur.name} logoImg="/logo.jpg" alt={guntur.img.alt} />
@@ -55,4 +52,6 @@ export default function App() {
       </footer>
     </>
   );
-}
+};
+
+export default App;
