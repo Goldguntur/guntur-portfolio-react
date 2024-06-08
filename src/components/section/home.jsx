@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 
 import { gsap } from "gsap";
 import CardDialoge from "../ui/card-dialoge";
-export default function home() {
+export default function Home() {
   const title1 = useRef(null);
   const title2 = useRef(null);
   const tittle3 = useRef(null);
