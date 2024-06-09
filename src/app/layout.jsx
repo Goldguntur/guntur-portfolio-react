@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="overflow-x-hidden w-full">{children}</body>
+      <body className="w-[100vw] max-w-full overflow-x-hidden">{children}</body>
     </html>
   );
 }

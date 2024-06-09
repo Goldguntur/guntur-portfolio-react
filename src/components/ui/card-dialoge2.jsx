@@ -25,7 +25,7 @@ export default function CardDialoge2({ image }) {
 
   return (
     <>
-      <div className="group flex flex-col justify-start items-start gap-2 w-96 h-56 duration-500 relative rounded-lg p-4 bg-primary hover:-translate-y-2 hover:shadow-xl shadow shadow-sky-400">
+      <div className="group flex flex-col justify-start items-start gap-2 lg:w-96 w-80 h-56 duration-500 relative rounded-lg p-4 bg-primary hover:-translate-y-2 hover:shadow-xl shadow shadow-sky-400">
         <img
           className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-sky-400"
           src={image}

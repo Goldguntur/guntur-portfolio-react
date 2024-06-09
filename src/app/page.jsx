@@ -28,13 +28,13 @@ const App = () => {
     <>
       <Navbar name={guntur.name} logoImg="/logo.jpg" alt={guntur.img.alt} />
       <main>
-        <div className="mb-44">
+        <div className="mb-44 w-full">
           <Home key="home" />
         </div>
-        <div className="mb-44">
+        <div className="mb-44 w-full">
           <About image={guntur.img.CV} key="about" />
         </div>
-        <div className="mb-44">
+        <div className="mb-44 w-full">
           <Projects key="projects" />
         </div>
         <Contact

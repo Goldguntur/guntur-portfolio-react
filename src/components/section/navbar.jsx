@@ -23,13 +23,13 @@ export default function Navbar({ name }) {
     setIsMenuVisible(!isMenuVisible);
   }
   return (
-    <nav className="navbar fixed  top-0 block z-50  w-full ">
-      <div className=" flex  relative bg-black  justify-between  lg:items-center  p-1 lg:p-3">
+    <nav className="navbar text-center fixed top-0 block z-50  w-full max-w-full  ">
+      <div className=" flex  relative bg-black  lg:justify-between  lg:items-center justify-center  lg:p-3">
         <h1 className="top-0  text-primary text-xl ">
           {name}e<span className=" text-white ">17</span>
         </h1>
         <div
-          className={`w-full ${
+          className={` ${
             isMenuVisible
               ? "-translate-y-0 md:transition-none"
               : "-translate-y-full md:-translate-y-0"
@@ -78,7 +78,7 @@ export default function Navbar({ name }) {
             </li>
           </ul>
         </div>
-        <div className="flex gap-x-2">
+        <div className="flex ">
           <button className="bg-primary m-0 top-0 max-h-24 w-24 font-medium h-8 text-sm md:text-base text-nowrap rounded">
             hire me
           </button>
@@ -87,7 +87,7 @@ export default function Navbar({ name }) {
             onClick={toggleMenu}
           >
             <svg
-              className="w-5 h-5"
+              className="w-5 h-5 ml-2"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 17 14"
