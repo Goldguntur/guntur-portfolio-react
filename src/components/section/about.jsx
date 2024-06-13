@@ -59,6 +59,7 @@ export default function About({ image, github, x, instagram, linkedin }) {
       {
         opacity: 0,
         x: 50,
+        position: "relative",
       },
       {
         opacity: 1,

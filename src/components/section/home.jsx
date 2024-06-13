@@ -146,9 +146,12 @@ export default function Home() {
           </span>
         </h3>
 
-        <p className="text-xs md:text-sm text-center lg:text-justify" id="text">
+        <p
+          className="text-xs md:text-sm text-center lg:text-justify relative"
+          id="text"
+        >
           {newText.split(" ").map((word, index) => (
-            <span key={index} className="word inline-block ml-0 mr-1 ">
+            <span key={index} className="word inline-block ml-0 mr-1 relative">
               {word}
             </span>
           ))}
