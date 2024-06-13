@@ -23,7 +23,7 @@ export default function Navbar({ name }) {
     setIsMenuVisible(!isMenuVisible);
   }
   return (
-    <nav className="navbar text-center fixed top-0 block z-50  w-full max-w-full  ">
+    <nav className="navbar text-center fixed top-0 block z-50  w-full max-w-full overflow-x-hidden ">
       <div className=" flex  relative bg-black  lg:justify-between  lg:items-center justify-center  lg:p-3">
         <h1 className="top-0  text-primary text-xl ">
           {name}e<span className=" text-white ">17</span>
@@ -83,7 +83,7 @@ export default function Navbar({ name }) {
             hire me
           </button>
           <button
-            className="top-0 max-h-24 m-0 h-8 rounded md:hidden"
+            className="top-0 max-h-24 m-0 h-8 rounded md:hidden inline-block"
             onClick={toggleMenu}
           >
             <svg

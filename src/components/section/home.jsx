@@ -98,7 +98,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="mx-auto mb-32 px-8 pt-9 lg:grid-flow-col-dense lg:h-[100vh]   lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:place-items-center flex items-center flex-col "
+      className="mx-auto mb-32 px-8 pt-9 lg:grid-flow-col-dense lg:h-[100vh]   lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:place-items-center flex items-center flex-col w-full"
     >
       <article className="lg:w-[45vw]   mb-24 lg:mb-0 text-center lg:text-justify">
         <div

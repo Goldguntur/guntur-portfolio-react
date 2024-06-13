@@ -84,7 +84,7 @@ export default function Projects() {
   return (
     <>
       <section id="projects">
-        <div className="pt-20 px-8 text-center">
+        <div className="pt-20 px-8 text-center w-full">
           <h1
             ref={headerProjectsAni}
             className="font-bold lg:text-4xl text-3xl mb-14 text-primary"
