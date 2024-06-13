@@ -73,7 +73,7 @@ export default function About({ image, github, x, instagram, linkedin }) {
       <section className="lg:h-[100v]" id="about">
         <div className="flex justify-center lg:items-start items-center lg:flex-row flex-col lg:gap-14 gap-8 lg:px-8 pt-20 ">
           <div className=" w-1/2 rounded-t-md  relative" ref={cvImageAni}>
-            <CardDialoge ref={cvImageAni} Image={image} />
+            <CardDialoge Image={image} />
           </div>
           <article className="text-center lg:text-justify mb-24">
             <h1
